@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schippe 7 - Blasmusik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-flex">
+      <a href="index.html"><img src="logo-placeholder.png" alt="Schippe 7 Logo" class="logo"></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="Startseite.html">Start</a></li>
+          <li><a href="besetzung.html">Besetzung</a></li>
+          <li><a href="termine.html">Termine</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-image">
+      <div class="hero-overlay">
+        <div class="container">
+          <h1>Willkommen bei Schippe 7</h1>
+          <p>Blasmusik mit Herz und Leidenschaft</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="willkommenstext with-image">
+      <div class="container">
+        <div class="text-img-wrapper">
+          <div class="text-column">
+            <h2>Über uns</h2>
+            <p class="text-large">Schippe 7 ist eine leidenschaftliche Blasmusikformation aus dem Herzen Deutschlands. Mit einem Repertoire, das von traditionellen Polkas bis zu modernen Arrangements reicht, begeistern wir unser Publikum bei jeder Gelegenheit.</p>
+            <p><a href="besetzung.html" class="button-link">Mehr über uns erfahren</a></p>
+          </div>
+          <div class="image-column">
+            <img src="Startbild.jpeg" alt="Schippe 7 in Aktion">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Schippe 7 – Alle Rechte vorbehalten | <a href="impressum.html">Impressum</a></p>
+    </div>
+  </footer>
+</body>
+</html>

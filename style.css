@@ -1,0 +1,483 @@
+/* style.css */
+
+/* Farben */
+:root {
+    --darkblue: #232f5e;
+    --olive: #a6a283;
+    --white: #ffffff;
+    --lightgray: #f8f8f8;
+    --textgray: #333;
+  }
+  
+  /* Reset & Grundlayout */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--lightgray);
+    color: var(--textgray);
+    line-height: 1.8;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--darkblue);
+    color: var(--white);
+    padding: 1rem 0;
+  }
+  
+  .header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    height: 60px;
+  }
+  
+  nav ul.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  nav a {
+    color: var(--white);
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--olive);
+  }
+  
+  /* Hero */
+  .hero {
+    background-color: var(--olive);
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.4rem;
+  }
+  
+  /* Bannerbild */
+  .intro-bild {
+    margin-top: -3rem;
+  }
+  
+  .banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-bottom: 5px solid var(--darkblue);
+  }
+  
+  /* Willkommenstext */
+  .willkommenstext {
+    background-color: var(--white);
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .willkommenstext h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--darkblue);
+  }
+  
+  .text-large {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--darkblue);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  
+  footer a {
+    color: var(--olive);
+    text-decoration: underline;
+  }
+  
+  /* Responsives Design */
+  @media (max-width: 768px) {
+    .header-flex {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    nav ul.nav-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero p,
+    .text-large {
+      font-size: 1rem;
+    }
+  
+    .willkommenstext h2 {
+      font-size: 1.8rem;
+    }
+  }
+  /* Hero als Hintergrundbild mit Text-Overlay */
+.hero-image {
+    background: url('Startbild.jpeg') center/cover no-repeat;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+  }
+  
+  .hero-overlay {
+    background-color: rgba(35, 47, 94, 0.3); /* weniger Deckkraft für sattere Bildwirkung */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  
+  .hero-image h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-image p {
+    font-size: 1.4rem;
+  }
+  
+  .with-image .text-img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  
+  .text-column {
+    flex: 1 1 55%;
+  }
+  
+  .image-column {
+    flex: 1 1 40%;
+  }
+  
+  .image-column img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  .button-link {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--darkblue);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .button-link:hover {
+    background-color: var(--olive);
+  }
+  
+  /* Besetzungsbereich */
+
+/* Besetzung - Hero wie Startseite */
+.besetzung-hero {
+    background: url('Hintergrund.jpeg') center/cover no-repeat;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+  }
+  
+  .besetzung-hero .hero-overlay {
+    background-color: rgba(35, 47, 94, 0.3); /* halbtransparent, wie auf Startseite */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .besetzung-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .besetzung-hero p {
+    font-size: 1.4rem;
+  }
+  
+  
+  /* Responsives Design */
+  @media (max-width: 768px) {
+    .intro-image {
+      height: 200px; /* Weniger Höhe auf mobilen Geräten */
+    }
+  }
+  
+  
+  /* Abwechselnde Hintergrundfarben für die Musiker-Sektionen */
+  .musiker {
+    background-color: var(--white);
+    padding: 4rem 0;
+  }
+  
+  .musiker.dark-background {
+    background-color: var(--darkblue);
+    color: var(--white);
+  }
+  
+  .musiker h2 {
+    font-size: 2rem;
+    color: var(--darkblue);
+    margin-bottom: 1rem;
+  }
+  
+  .musiker.dark-background h2 {
+    color: var(--white);
+  }
+  
+  .text-column {
+    flex: 1 1 55%;
+  }
+  
+  .image-column {
+    flex: 1 1 40%;
+  }
+  
+  .image-column img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Text und Bild im gleichen Stil wie auf der Startseite */
+  .text-large {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+  }
+  
+  @media (max-width: 768px) {
+    .musiker .text-img-wrapper {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .musiker .text-column,
+    .musiker .image-column {
+      flex: 1 1 100%;
+    }
+  
+    .musiker h2 {
+      font-size: 1.6rem;
+    }
+  
+    .text-large {
+      font-size: 1rem;
+    }
+  }
+  
+
+  /* Termine Hero */
+.termine-hero {
+  background: url('Muschel.jpeg') center/cover no-repeat;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+}
+
+.termine-hero .hero-overlay {
+  background-color: rgba(35, 47, 94, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.termine-hero {
+  margin-bottom: 4rem; /* Oder 5rem für noch mehr Luft */
+}
+
+.termine-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.termine-hero p {
+  font-size: 1.4rem;
+}
+
+/* Termine-Galerie */
+.termine-gallery {
+  background-color: var(--white);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.termin img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.termin p {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: var(--textgray);
+  font-weight: 500;
+}
+
+/* Hero für Kontakt */
+.kontakt-hero {
+  background: url('Muschel2.jpeg') center/cover no-repeat;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.kontakt-hero .hero-overlay {
+  background-color: rgba(35, 47, 94, 0.3);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.kontakt-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.kontakt-hero p {
+  font-size: 1.4rem;
+}
+
+.kontakt-info {
+  background-color: var(--white);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.kontakt-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.kontakt-item {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background-color: var(--lightgray);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.kontakt-item:hover {
+  transform: translateY(-5px);
+}
+
+.kontakt-icon {
+  height: 50px;
+  margin-bottom: 1rem;
+  filter: brightness(0) saturate(100%) invert(15%) sepia(8%) saturate(617%) hue-rotate(186deg) brightness(95%) contrast(95%);
+}
+
+.kontakt-item h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--darkblue);
+}
+
+.kontakt-item a {
+  color: var(--textgray);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.kontakt-item a:hover {
+  color: var(--olive);
+}
+
+/* Responsiv */
+@media (max-width: 768px) {
+  .kontakt-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
